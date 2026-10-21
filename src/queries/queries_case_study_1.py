@@ -45,7 +45,7 @@ WITH RankingEquipes AS (
         Player,
         Team,
         Price_in_cr,
-        RANK() OVER (PARTITION BY Team ORDER BY Price_in_cr DESC) AS rn
+        ROW_NUMBER() OVER (PARTITION BY Team ORDER BY Price_in_cr DESC) AS rn
     FROM curso.dbo.IPLPlayers
 )
 SELECT 
@@ -169,7 +169,16 @@ ORDER BY Player DESC;
 
 
 # --Q10 For each role, find the most expensive player and their price using a correlated subquery
-
+query_10 = """
+SELECT *
+FROM (
+SELECT [Role], 
+Price_in_cr,
+ROW_NUMBER() over(PARTITION BY [Role] ORDER BY Price_in_cr DESC) as rn
+FROM curso.dbo.IPLPlayers
+) AS rank_price
+WHERE rn = 1;
+"""
 
 					
 

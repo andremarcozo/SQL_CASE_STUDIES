@@ -5,7 +5,7 @@ import os
 def export_query_to_csv(conn: pyodbc.Connection, query: str, file_name: str) -> None:
     """Executa a query e salva os resultados em um arquivo CSV na pasta results."""
     
-    pasta_resultados = "C:\\Users\\AndréMarcozo\\Desktop\\ESTUDOS\\SQL_COURSE\\results\\case_study_1"
+    pasta_resultados = "C:\\Users\\AndréMarcozo\\Desktop\\ESTUDOS\\SQL_COURSE\\results\\case_study_2"
     
 
     os.makedirs(pasta_resultados, exist_ok=True)

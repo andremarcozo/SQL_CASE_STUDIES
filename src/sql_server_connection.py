@@ -17,7 +17,7 @@ def get_connection() -> pyodbc.Connection:
         raise ValueError("A senha (DB_PASSWORD) não foi encontrada no arquivo .env!")
 
     connection_string = (
-        f"DRIVER={{SQL Server}};"
+        f"DRIVER={{ODBC Driver 18 for SQL Server}};"
         f"SERVER={server};"
         f"DATABASE={database};"
         f"UID={username};"
