@@ -2,7 +2,7 @@ from sql_server_connection import get_connection
 from export_data import export_query_to_csv
 
 
-from queries import query_1 
+from queries.queries_case_study_1 import query_1, query_2, query_3, query_4, query_5, query_6, query_7, query_8, query_9, query_10
 
 def main():
     conn = get_connection()
@@ -10,7 +10,7 @@ def main():
         print("Executando a query e gerando o arquivo CSV...")
         
 
-        export_query_to_csv(conn, query=query_1, file_name="total_spending_on_players_for_each_team.csv")
+        export_query_to_csv(conn, query=query_10, file_name="query_10_result.csv")
         
     except Exception as e:
         print(f"Erro durante a execução: {e}")

@@ -76,7 +76,7 @@ wheels = [
 [[package]]
 name = "sql-course"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "pyodbc" },
     { name = "python-dotenv" },

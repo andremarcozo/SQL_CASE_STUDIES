@@ -1,5 +1,7 @@
 USE curso;
-GO
+
+
+DROP TABLE IF EXISTS IPLPlayers;
 
 
 CREATE TABLE IPLPlayers (
@@ -10,7 +12,7 @@ CREATE TABLE IPLPlayers (
     Role	NVARCHAR(50),
     Team	NVARCHAR(100)
 );
-GO
+
 
 INSERT INTO IPLPlayers (Player, Price_in_cr, Type, Acquisition, Role, Team) VALUES ('Ruturaj Gaikwad', '18', 'Indian (capped)', 'Retained', 'Batter', 'Chennai Super Kings');
 INSERT INTO IPLPlayers (Player, Price_in_cr, Type, Acquisition, Role, Team) VALUES ('Ravindra Jadeja', '18', 'Indian (capped)', 'Retained', 'All-rounder', 'Chennai Super Kings');

@@ -9,7 +9,7 @@ def run_sql_script(conn: pyodbc.Connection, file_path: str) -> None:
 
         cursor = conn.cursor()
         
-        comandos_sql = sql_script.split("GO")
+        comandos_sql = sql_script.split(";")
         
         for comando in comandos_sql:
             if comando.strip():
@@ -31,7 +31,7 @@ def execute_data_ingestion():
     conn = get_connection()
     
     try:
-        run_sql_script(conn, file_path="../sql_ingestion/case_study_1.sql")
+        run_sql_script(conn, file_path="../sql_ingestion/case_study_2.sql")
         
         print("Carga de dados concluída com sucesso! 🚀")
         
